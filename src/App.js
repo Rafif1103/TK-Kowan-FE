@@ -117,7 +117,7 @@ function App() {
         <div className="bg-gray-50 p-6 rounded-md shadow-md">
           <h2 className="text-2xl font-semibold text-blue-500">Conversion History</h2>
           <ul className="mt-4 space-y-2">
-            {conversionHistory.slice(0, 3).map((item, index) => (
+            {conversionHistory.slice(-3).map((item, index) => (
               <li
                 key={index}
                 className="bg-gray-100 p-4 rounded-md border border-gray-200"
