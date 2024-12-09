@@ -11,7 +11,7 @@ function App() {
 
   const fetchConversion = async () => {
     try {
-      const response = await fetch('http://kowan-backend.54.173.183.227.sslip.io:80/convert', {
+      const response = await fetch('http://my-lb-kowan-445766522.us-east-1.elb.amazonaws.com/convert', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function App() {
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch('http://kowan-backend.54.173.183.227.sslip.io/history');
+      const response = await fetch('http://my-lb-kowan-445766522.us-east-1.elb.amazonaws.com/history');
       const data = await response.json();
       if (data.status === 200) {
         setConversionHistory(data.data);
